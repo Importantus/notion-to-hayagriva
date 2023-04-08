@@ -1,0 +1,40 @@
+
+test:
+  type: Web
+  issn: test
+  title: TestArtikel
+  doi: test
+  date: 2023-04-03
+  publisher: test
+  issue: 12
+  isbn: test
+  volume: 34
+  organization: test
+  url:
+    value: https://draculente.eu
+    date: 2023-04-06
+  location: test
+
+physicalReview:
+  type: Periodical
+  title: Physical Review B
+  publisher: American Physical Society
+  issue: 16
+  volume: 102
+
+kinetics:
+  type: Article
+  title: Kinetics and luminescence of the excitations of a nonequilibrium
+    polariton condensate
+  doi: 10.1103/PhysRevB.102.165126
+  author:
+    - "Doan, T. D. "
+    - Tran Thoai, D. B.
+    - Haug, Hartmut
+  date: 2020-10-14
+  parent:
+    type: Periodical
+    title: Physical Review B
+    publisher: American Physical Society
+    issue: 16
+    volume: 102
