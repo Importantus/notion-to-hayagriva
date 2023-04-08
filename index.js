@@ -21,7 +21,7 @@ const values = [
     mandatory: true,
   },
   {
-    hayagriva: "issn",
+    hayagriva: "ISSN",
     notion: "Issn",
   },
   {
