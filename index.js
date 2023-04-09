@@ -89,6 +89,15 @@ const dataBaseFetchOptions = {
   body: JSON.stringify({ page_size: 100 }),
 };
 
+if (!process.env.NOTION_DB_ID)
+  throw new Error(
+    "No database ID specified. Please set the NOTION_DB_ID environment variable."
+  );
+if (!process.env.NOTION_TOKEN)
+  throw new Error(
+    "No Notion token specified. Please set the NOTION_TOKEN environment variable."
+  );
+
 fetch(
   "https://api.notion.com/v1/databases/" + process.env.NOTION_DB_ID + "/query",
   dataBaseFetchOptions
@@ -105,7 +114,7 @@ async function loopThroughResults(data) {
       "\n" + stringify(await constructHayagrivaObject(results[i], true));
   }
   //   console.log(hayagrivaObjects);
-  writeFileSync("hayagriva.yaml", hayagrivaObjects);
+  writeFileSync("hayagriva.yml", hayagrivaObjects);
 }
 
 async function constructHayagrivaObject(data, toplevel = false) {
@@ -140,7 +149,9 @@ async function constructHayagrivaObject(data, toplevel = false) {
       if (extracted) hayagrivaObject[hayagrivaKey] = extracted;
       else if (mandatory) {
         // hayagrivaObject[hayagrivaKey] = "";
-        console.log("Missing mandatory field at " + key + ": " + hayagrivaKey);
+        console.log(
+          "\x1b[31mMissing mandatory field at " + key + ": " + hayagrivaKey
+        );
       }
     }
   }
