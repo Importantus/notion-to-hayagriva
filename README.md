@@ -30,6 +30,7 @@ You can either duplicate the page template using the link below, or create a new
 [Link to the template](https://importantus.notion.site/Bibliografie-2175c98af72a4bd4837f35194d96bfa6)
 
 **Requirements**
+> If you you want to use different property names, you need to change the `values` Array in `index.js`.
 
 The properties necessary to import publications in a database are the following:
 
