@@ -1,9 +1,10 @@
 import fetch from "node-fetch";
 import { stringify } from "yaml";
 import { writeFileSync } from "fs";
-import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import * as dotenv from "dotenv";
 dotenv.config();
 
+// Functions to extract data from Notion
 const typeExtraction = {
   rich_text: getRichText,
   select: getSelect,
@@ -14,6 +15,8 @@ const typeExtraction = {
   relation: getRelation,
 };
 
+// Values to extract from Notion and their
+// corresponding Hayagriva keys
 const values = [
   {
     hayagriva: "type",
