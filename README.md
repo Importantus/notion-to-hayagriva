@@ -62,8 +62,6 @@ Create an [integration](https://www.notion.so/my-integrations) for the notion-sc
 Option needed:
 - [x] Internal Integration
 - [x] Read content
-- [x] Update content
-- [x] Insert content
 
 Copy the `Internal Integration Token` for the step 4.
 
