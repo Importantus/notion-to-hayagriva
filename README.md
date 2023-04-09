@@ -51,7 +51,7 @@ The properties necessary to import publications in a database are the following:
 | Ort           | Text          |
 | Issue         | Number        |
 | Volume        | Number        |
-| Paren         | Relation      |
+| Parent        | Relation      |
 
 **No space or special sign should be in the names of the properties.**
 
